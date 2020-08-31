@@ -1,0 +1,14 @@
+<h1>Score</h1>
+
+<% if @in_grid %>
+ <% if @english_word %>
+  <p><strong><%= @word %></strong> is a valid English word!</p>
+<% elsif %>
+  <p><strong><%= @word %></strong> does not seem to be a valid English word...</p>
+<% end %>
+
+<% else %>
+  <p>sorry but <strong><%= @word %></strong> can't be built out ofer <%= @letters.join(", ") %></p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
